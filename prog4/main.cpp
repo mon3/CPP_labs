@@ -63,30 +63,27 @@ return os;
 	Macierz b (plik_z_programem2);
 	std::cout << b;
 
-	std::pair<int,int> rozmiar_b;
-	rozmiar_b = b.rozmiar();
+	// std::pair<int,int> rozmiar_b;
+	// rozmiar_b = b.rozmiar();
 
-	int n1 = rozmiar_a.first;
-	int m2 = rozmiar_b.second;
+	// int n1 = rozmiar_a.first;
+	// int m2 = rozmiar_b.second;
 
-	Macierz c (n1, m2);
-	std::cout << c;
+	// Macierz c (n1, m2);
+	// std::cout << c;
 
 	int p = 2; // p -liczba wątków
 	// macierz dzielimy na wątki jako n1*m2/p
 
-	/*
+	
 
-	Macierz a (plik_z_programem);
-	std::cout<< a<<"\n";
-	std::pair<int,int> rozmiar ;
-	rozmiar =a.rozmiar();
-	// std::cout<< "rozmiar 1 = " << rozmiar.first << std::endl;
-	// std::cout<< "rozmiar 2 = " << rozmiar.second << std::endl;
+
 	// Mnoży macierze a i b (liczba oznacza liczbę równoległych wątków)
-	// std::auto_ptr<Macierz> wynik = mnozenie_macierzy (a, b, 2);
+	std::unique_ptr<Macierz> wynik = mnozenie_macierzy (a, b, 2);
+	std::cout << *wynik;
+
 	clock_gettime (ZegarID, &koniec); // Zapisuje czas końca mnożenia
 	std::cout << " zajelo " << interwal (start, koniec) << " s" << std::endl;
-*/
+
 	return 0;
 	}

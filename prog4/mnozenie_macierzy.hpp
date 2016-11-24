@@ -30,7 +30,7 @@ Macierz &m3_;
 
 
 // Funkcja mnożąca macierze m1 i m2 w p wątkach
-std::auto_ptr<Macierz> mnozenie_macierzy (const Macierz &m1, const Macierz &m2, int p);
+std::unique_ptr<Macierz> mnozenie_macierzy (const Macierz &mat1, const Macierz &mat2, int p);
 class MnozycielMacierzy
 // funktor wykorzystywany w wątkach mnożących macierze
 {
